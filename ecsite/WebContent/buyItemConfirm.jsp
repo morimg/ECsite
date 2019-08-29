@@ -74,7 +74,7 @@
 	</div>
 	<div id="main">
 		<div id="top">
-			<p>BuyItem</p>
+			<p>BuyItemConfirm</p>
 		</div>
 		<div>
 			<s:form>
@@ -83,21 +83,17 @@
 							<th>商品名</th>
 							<th>値段</th>
 							<th>購入個数</th>
+							<th>支払い方法</th>
 						</tr>
-					<s:iterator value="buyItemList">
+					<s:iterator value="buyItemConfirmList">
 						<tr>
-							<td><s:property value="itemName"/></td>
-							<td><s:property value="itemPrice"/></td>
-
+							<td><input type="hidden" name="buyItemId" value=<s:property value="buyItemId"/>><s:property value="buyItemName"/></td>
+							<td><s:property value="buyItemPrice"/><input type="hidden" name="buyItemPrice" value=<s:property value="buyItemPrice"/>></td>
+							<td><s:property value="buyItemCount"/><input type="hidden" name="buyItemCount" value=<s:property value="buyItemCount"/>></td>
+							<td><s:property value="session.pay"/></td>
 						</tr>
 					</s:iterator>
 					</table>
-					<tr>
-						<td>支払い方法</td>
-						<td>
-							<s:property value="session.pay"/>
-						</td>
-					</tr>
 					<tr>
 						<td>
 							<input type="button" value="戻る" onclick="submitAction('HomeAction')"/>

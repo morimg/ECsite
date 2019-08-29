@@ -84,11 +84,12 @@
 					<s:iterator value="buyItemList">
 						<tr>
 							<td>
+								<input type="hidden" name="id" value=<s:property value="id"/>>
 								<input type="checkbox" name="checkItem" value=<s:property value="id"/>>
 							</td>
-							<td><s:property value="itemName"/><input type="hidden" name="id" value=<s:property value="id"/>></td>
-							<td><s:property value="itemPrice"/><input type="hidden" name="itemName" value=<s:property value="itemName"/>></td>
-							<td><s:property value="itemStock"/></td>
+							<td><s:property value="itemName"/><input type="hidden" name="itemName" value=<s:property value="itemName"/>></td>
+							<td><s:property value="itemPrice"/><input type="hidden" name="itemPrice" value=<s:property value="itemPrice"/>></td>
+							<td><s:property value="itemStock"/><input type="hidden" name="itemStock" value=<s:property value="itemStock"/>></td>
 							<td><select name="count">
 									<option value="1" selected="selected">1</option>
 									<option value="2">2</option>

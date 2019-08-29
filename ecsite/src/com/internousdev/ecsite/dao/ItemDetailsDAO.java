@@ -38,4 +38,29 @@ public class ItemDetailsDAO {
 		return dto;
 	}
 
+	public ItemDetailsDTO getItemDetailsInfoById(String itemId) throws SQLException{
+		String sql = "SELECT * FROM item_info_transaction where id = ?";
+
+		try{
+			PreparedStatement preparedStatement=connection.prepareStatement(sql);
+			preparedStatement.setString(1, itemId);
+			ResultSet resultSet = preparedStatement.executeQuery();
+
+			if(resultSet.next()){
+				dto.setId(resultSet.getString("id"));
+				dto.setItemName(resultSet.getString("item_name"));
+				dto.setItemPrice(resultSet.getString("item_price"));
+				dto.setItemStock(resultSet.getString("item_stock"));
+				dto.setInsert_date(resultSet.getString("insert_date"));
+				dto.setUpdate_date(resultSet.getString("update_date"));
+
+			}
+		}catch(Exception e){
+			e.printStackTrace();
+		}finally{
+			connection.close();
+		}
+		return dto;
+	}
+
 }

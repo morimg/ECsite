@@ -1,38 +1,39 @@
 package com.internousdev.ecsite.dto;
 
 public class BuyItemConfirmDTO {
-	private int id;
-	private String itemName;
-	private String itemPrice;
-	private String itemStock;
+	private String buyItemId;
+	private String buyItemName;
+	private String buyItemPrice;
+	private String buyItemCount;
 
-	public String getItemName(){
-		return itemName;
+
+
+
+	public String getBuyItemId() {
+		return buyItemId;
 	}
-	public void setItemName(String itemName){
-		this.itemName=itemName;
+	public void setBuyItemId(String buyItemId) {
+		this.buyItemId = buyItemId;
+	}
+	public String getBuyItemName() {
+		return buyItemName;
+	}
+	public void setBuyItemName(String buyItemName) {
+		this.buyItemName = buyItemName;
+	}
+	public String getBuyItemPrice() {
+		return buyItemPrice;
+	}
+	public void setBuyItemPrice(String buyItemPrice) {
+		this.buyItemPrice = buyItemPrice;
+	}
+	public String getBuyItemCount() {
+		return buyItemCount;
+	}
+	public void setBuyItemCount(String buyItemCount) {
+		this.buyItemCount = buyItemCount;
 	}
 
-	public String getItemPrice(){
-		return itemPrice;
-	}
-	public void setItemPrice(String itemPrice){
-		this.itemPrice=itemPrice;
-	}
-
-	public String getItemStock(){
-		return itemStock;
-	}
-	public void setItemStock(String itemStock){
-		this.itemStock=itemStock;
-	}
-
-	public int getId(){
-		return id;
-	}
-	public void setId(int id){
-		this.id=id;
-	}
 
 
 }
