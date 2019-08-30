@@ -87,7 +87,7 @@
 							<label>値段:</label>
 						</td>
 						<td>
-							<input type="text" name="Price"value=""/>円
+							<input type="text" name="Price"value="" placeholder="半角数字のみ"/>円
 						</td>
 					</tr>
 					<tr>
@@ -95,7 +95,7 @@
 							<label>在庫数:</label>
 						</td>
 						<td>
-							<input type="text" name="Stock"value=""/>個
+							<input type="text" name="Stock"value="" placeholder="半角数字のみ"/>個
 						</td>
 					</tr>
 					<s:submit value="登録"/>

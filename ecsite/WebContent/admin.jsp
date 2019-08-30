@@ -73,10 +73,10 @@
 		}
 
 		#footer{
+			clear:both;
 			width:100%;
 			height: 80px;
 			background-color: black;
-			clear:both;
 		}
 
 		#text-center{
@@ -116,6 +116,11 @@
 					<s:submit value="一覧"/>
 				</s:form>
 			</div>
+		</div>
+		<div>
+			<p>Homeへ戻る場合は
+				<a href='<s:url action="GoHomeAction"/>'>こちら</a>
+			</p>
 		</div>
 	</div>
 	<div id="footer">

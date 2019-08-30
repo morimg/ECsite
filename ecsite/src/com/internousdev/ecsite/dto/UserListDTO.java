@@ -8,7 +8,6 @@ public class UserListDTO {
 	private String userName;
 	private String insert_date;
 
-
 	public String getId(){
 		return id;
 	}

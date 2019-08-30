@@ -38,13 +38,16 @@ public class MyPageAction extends ActionSupport implements SessionAware{
 		String result = SUCCESS;
 		return result;
 	}
+
 	public void delete() throws SQLException{
 		String user_master_id =session.get("login_user_id").toString();
 
 		int res =myPageDAO.buyItemHistoryDelete(user_master_id);
+
 		if(res>0){
 			myPageList = null;
 			setMessage("商品情報を正しく削除しました");
+
 		}else if(res == 0){
 			setMessage("商品情報の削除に失敗しました。");
 		}

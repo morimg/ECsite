@@ -5,10 +5,15 @@ public class BuyItemConfirmDTO {
 	private String buyItemName;
 	private String buyItemPrice;
 	private String buyItemCount;
+	private String errorMessage;
 
 
-
-
+	public String getErrorMessage() {
+		return errorMessage;
+	}
+	public void setErrorMessage(String errorMessage) {
+		this.errorMessage = errorMessage;
+	}
 	public String getBuyItemId() {
 		return buyItemId;
 	}

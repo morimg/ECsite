@@ -39,38 +39,49 @@ public class BuyItemAction extends ActionSupport implements SessionAware{
 			session.put("pay",payment);
 		}
 
+		ArrayList<BuyItemConfirmDTO> buyItemConfirmDTO = new ArrayList<BuyItemConfirmDTO>();
+		buyItemConfirmList=buyItemConfirmDTO;
 
 		if(checkItem==null){
-			setErrorMessage("商品が選択されていません。");
+
+			setErrorMessage("商品が選択されていません。<br>");
 			result = ERROR;
+
 			BuyItemDAO buyItemDAO = new BuyItemDAO();
 			buyItemList=buyItemDAO.getBuyItemInfo();
+
+			BuyItemConfirmDTO dto = new BuyItemConfirmDTO();
+			dto.setErrorMessage(errorMessage);
+			buyItemConfirmDTO.add(dto);
+
 		}else{
 			String[] checkItemList = checkItem.split(", ",0);
 			String[] idList = id.split(", ",0);
-
-			ArrayList<BuyItemConfirmDTO> buyItemConfirmDTO = new ArrayList<BuyItemConfirmDTO>();
-			buyItemConfirmList=buyItemConfirmDTO;
 
 			for (int i=0; i<checkItemList.length; i++) {
 				for (int j=0; j<idList.length; j++) {
 					if (checkItemList[i].equals(idList[j])) {
 
-						String[] countList = count.split(", ",0);
-
 						ItemDetailsDAO itemDetailsDAO = new ItemDetailsDAO();
 						ItemDetailsDTO itemDetailsDTO = new ItemDetailsDTO();
 						itemDetailsDTO= (itemDetailsDAO).getItemDetailsInfoById(idList[j]);
+
+						String[] countList = count.split(", ",0);
 
 						int intItemStock = Integer.parseInt(itemDetailsDTO.getItemStock());
 						int intCount = Integer.parseInt(countList[j]);
 
 						if(intItemStock<intCount){
-							setErrorMessage((itemDetailsDTO.getItemName())+"の在庫が足りません。");
+
+							setErrorMessage((itemDetailsDTO.getItemName())+"の在庫が足りません。<br>");
 							result = ERROR;
 
 							BuyItemDAO buyItemDAO = new BuyItemDAO();
 							buyItemList=buyItemDAO.getBuyItemInfo();
+
+							BuyItemConfirmDTO dto = new BuyItemConfirmDTO();
+							dto.setErrorMessage(errorMessage);
+							buyItemConfirmDTO.add(dto);
 
 						}else{
 
@@ -88,7 +99,6 @@ public class BuyItemAction extends ActionSupport implements SessionAware{
 				}
 			}
 		}
-
 		return result;
 	}
 

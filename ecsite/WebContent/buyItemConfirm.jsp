@@ -88,8 +88,8 @@
 					<s:iterator value="buyItemConfirmList">
 						<tr>
 							<td><input type="hidden" name="buyItemId" value=<s:property value="buyItemId"/>><s:property value="buyItemName"/></td>
-							<td><s:property value="buyItemPrice"/><input type="hidden" name="buyItemPrice" value=<s:property value="buyItemPrice"/>></td>
-							<td><s:property value="buyItemCount"/><input type="hidden" name="buyItemCount" value=<s:property value="buyItemCount"/>></td>
+							<td><s:property value="buyItemPrice"/><input type="hidden" name="buyItemPrice" value=<s:property value="buyItemPrice"/>>円</td>
+							<td><s:property value="buyItemCount"/><input type="hidden" name="buyItemCount" value=<s:property value="buyItemCount"/>>個</td>
 							<td><s:property value="session.pay"/></td>
 						</tr>
 					</s:iterator>

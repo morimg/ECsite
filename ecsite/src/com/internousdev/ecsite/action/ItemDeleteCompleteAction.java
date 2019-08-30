@@ -20,6 +20,7 @@ public class ItemDeleteCompleteAction extends ActionSupport implements SessionAw
 		    String itemId = session.get("ItemId").toString();
 
 			int res =itemDeleteCompleteDAO.itemDelete(itemId);
+
 			if(res>0){
 				setMessage("商品情報を正しく削除しました");
 			}else if(res == 0){

@@ -17,10 +17,12 @@ public class ItemCreateCompleteAction extends ActionSupport implements SessionAw
 	private ItemCreateCompleteDAO ItemCreateCompleteDAO = new ItemCreateCompleteDAO();
 
 	public String execute()throws SQLException{
+
 		ItemCreateCompleteDAO.createItem(
-				session.get("ItemName").toString(),
-				session.get("Price").toString(),
-				session.get("Stock").toString());
+			session.get("ItemName").toString(),
+			session.get("Price").toString(),
+			session.get("Stock").toString());
+
 		String result = SUCCESS;
 
 		return result;

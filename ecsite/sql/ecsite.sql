@@ -41,12 +41,13 @@ create table user_buy_item_transaction(
 	update_date datetime
 );
 
-INSERT INTO item_info_transaction(item_name,item_price,item_stock) VALUES("えんぴつ",100,50);
-INSERT INTO item_info_transaction(item_name,item_price,item_stock) VALUES("けしごむ",35,35);
-INSERT INTO item_info_transaction(item_name,item_price,item_stock) VALUES("ノート",150,60);
-INSERT INTO item_info_transaction(item_name,item_price,item_stock) VALUES("えんぴつ3本",250,70);
-INSERT INTO item_info_transaction(item_name,item_price,item_stock) VALUES("ノート15冊",1350,80);
+INSERT INTO item_info_transaction(item_name,item_price,item_stock) VALUES("えんぴつ",80,50);
+INSERT INTO item_info_transaction(item_name,item_price,item_stock) VALUES("けしごむ",100,35);
+INSERT INTO item_info_transaction(item_name,item_price,item_stock) VALUES("ノート",120,60);
 INSERT INTO item_info_transaction(item_name,item_price,item_stock) VALUES("メモ帳",60,90);
+INSERT INTO item_info_transaction(item_name,item_price,item_stock) VALUES("えんぴつ3本",200,70);
+INSERT INTO item_info_transaction(item_name,item_price,item_stock) VALUES("ノート15冊",1600,80);
 INSERT INTO item_info_transaction(item_name,item_price,item_stock) VALUES("ペンケース",1500,0);
+INSERT INTO item_info_transaction(item_name,item_price,item_stock) VALUES("はさみ",300,0);
 INSERT INTO login_user_transaction(admin_flg,login_id,login_pass,user_name) VALUES("1","mori","mmm","森");
 INSERT INTO login_user_transaction(login_id,login_pass,user_name) VALUES("taro","123","太郎");

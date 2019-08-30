@@ -19,9 +19,7 @@ public class UserListAction extends ActionSupport {
 		userList=userListDAO.getUserInfo();
 
 		if(userList.isEmpty()){
-			setUserListMessage("enpty");
-		}else{
-			setUserListMessage("in");
+			userList = null;
 		}
 
 		return result;

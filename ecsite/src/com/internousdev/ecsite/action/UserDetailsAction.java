@@ -15,6 +15,7 @@ public class UserDetailsAction extends ActionSupport implements SessionAware{
 	private String result;
 
 	public String execute()throws SQLException{
+
 		UserDetailsDAO userDetailsDAO = new UserDetailsDAO();
 		UserDetailsDTO userDetailsDTO = new UserDetailsDTO();
 

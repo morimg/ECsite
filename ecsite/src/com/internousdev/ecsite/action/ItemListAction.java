@@ -20,9 +20,7 @@ public class ItemListAction extends ActionSupport {
 		itemList=itemListDAO.getItemInfo();
 
 		if(itemList.isEmpty()){
-			setItemListMessage("enpty");
-		}else{
-			setItemListMessage("in");
+			itemList = null;
 		}
 		return result;
 	}

@@ -75,12 +75,12 @@
 			<p>UserList</p>
 		</div>
 		<div>
-			<s:if test="userListMessage == 'enpty'">
+			<s:if test="userList == null ">
 				<h3>ユーザー情報はありません。</h3>
 			</s:if>
 		</div>
 		<div>
-			<s:elseif test="userListMessage == 'in'">
+			<s:elseif test="userList != null ">
 				<h3>ユーザー情報は以下になります。</h3>
 				<table border="1">
 					<tr>

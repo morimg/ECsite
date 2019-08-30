@@ -77,7 +77,7 @@
 							<label>商品名:</label>
 						</td>
 						<td>
-							<s:property value="itemName" escape="false"/>
+							<s:property value="itemName"/>
 						</td>
 					</tr>
 					<tr id="box">
@@ -85,7 +85,7 @@
 							<label>値段:</label>
 						</td>
 						<td>
-							<s:property value="price" escape="false"/>円
+							<s:property value="price"/>円
 						</td>
 					</tr>
 					<tr id="box">
@@ -93,7 +93,7 @@
 							<label>在庫数:</label>
 						</td>
 						<td>
-							<s:property value="stock" escape="false"/>個
+							<s:property value="stock"/>個
 						</td>
 					</tr>
 					<tr>

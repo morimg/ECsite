@@ -75,12 +75,12 @@
 			<p>ItemList</p>
 		</div>
 		<div>
-			<s:if test="itemListMessage == 'enpty' ">
+			<s:if test="itemList == null ">
 				<h3>商品情報はありません。</h3>
 			</s:if>
 		</div>
 		<div>
-			<s:elseif test="itemListMessage == 'in' ">
+			<s:elseif test="itemList != null ">
 				<h3>商品情報は以下になります。</h3>
 				<table border="1">
 					<tr>

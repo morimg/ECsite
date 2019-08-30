@@ -20,6 +20,7 @@ public class UserDeleteCompleteAction extends ActionSupport implements SessionAw
 			String loginId = session.get("LoginId").toString();
 
 			int res = userDeleteCompleteDAO.userDelete(loginId);
+
 			if(res>0){
 				setMessage("ユーザー情報を正しく削除しました。");
 			}else if(res == 0){

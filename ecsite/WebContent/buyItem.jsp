@@ -70,7 +70,12 @@
 		</div>
 		<div>
 		<s:if test="errorMessage != ''">
-				<s:property value="errorMessage" escape="false"/>
+			<s:iterator value="buyItemConfirmList">
+				<tr>
+					<td><s:property value="errorMessage" escape="false"/></td>
+				</tr>
+			</s:iterator>
+			<br>
 		</s:if>
 			<s:form action="BuyItemAction">
 				<table border="1">

@@ -23,6 +23,7 @@ public class UserDeleteCompleteDAO {
 
 		}catch(SQLException e){
 			e.printStackTrace();
+
 		}finally{
 			connection.close();
 		}
